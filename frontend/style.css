@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --blurple: #7289da;
+  --dlurple: #4056a7;
+  --bg-pri: #424549;
+  --bg-sec: #36393e;
+  --bg-tri: #282b30;
+  --bg-dark: #1e2124;
+}
+
+::selection {
+  background: var(--blurple);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--blurple);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  font-family: "Noto Sans", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background: var(--bg-sec);
+  color: white;
+}
+
+.sidebar {
+  width: 60px;
+  height: 100vh;
+  background: var(--bg-dark);
+}
+
+.vertcontent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.topbar {
+  width: 100%;
+  min-height: 60px;
+  background: var(--bg-tri);
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  padding-left: 30px;
+  user-select: none;
+}
+
+.topbar>* {
+  margin-left: 0.125rem;
+}
+
+#roomName {
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+#roomName:hover {
+  text-decoration: underline;
+}
+
+#roomIcon {
+  background: linear-gradient(var(--blurple), var(--dlurple));
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-right: 18px;
+  user-select: none;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.blurple-input {
+  border: none;
+  background: var(--bg-pri);
+  color: var(--blurple);
+  height: 24px;
+  padding-left: 12px;
+  border-radius: 12px;
+}
+
+#messageText {
+  border-radius: 8px;
+  background: var(--bg-pri);
+  border: none;
+  width: 100%;
+  padding-left: 3rem;
+  height: inherit;
+  color: white;
+  font-size: 16px;
+}
+
+.messageLeftIcon {
+  cursor: pointer;
+  position: absolute;
+  left: 28px;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  top: 24px;
+  padding-left: 8px;
+}
+
+#messageText:focus {
+  outline: none;
+}
+
+.blurple-input:focus {
+  outline: none;
+}
+
+#messageArea {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+}
+
+#usernameTitle {
+  font-size: 16px;
+}
+
+#usernameTitle:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#messageList {
+  height: 85vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  /* scrollbar-color: var(--blurple) var(--bg-dark); */
+}
+
+#messageList> :first-child {
+  margin-top: auto !important;
+}
+
+.message {
+  background: var(--bg-pri);
+  width: 100%;
+  height: 48px;
+  display: flex;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.messageLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.messageRight {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+}
+
+.messageText {
+  padding: 0;
+}
+
+.messageIcon {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  padding-top: 8px;
+  background: var(--blurple);
+  color: white;
+  border-radius: 50%;
+}
+
+.messageFrom {
+  font-weight: 800;
+  font-size: 14px;
+}
+
+#loadingScreen {
+  background: yellow;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-sec);
+}

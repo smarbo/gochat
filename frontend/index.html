@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gochat | #general</title>
+  <script src="https://kit.fontawesome.com/c557e85911.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="loadingScreen">
+    <img width="86px" height="86px" src="spinner.svg" />
+    <h1 style="font-weight: 800; margin-top: 24px;">Gochat is loading</h1>
+  </div>
+  <div class="sidebar"></div>
+  <div class="vertcontent">
+    <div class="topbar">
+      <div id="roomIcon">
+      </div>#<span id="roomName"></span>
+      <div style="margin-left: auto; font-size: 24px; font-weight: 800;" class="">
+        <span id="usernameTitle">@Guest</span>
+      </div>
+      <button
+        style="margin-left: auto; margin-right: 48px; color: white; font-size: 24px; background: none; outline: none; border: none;"><i
+          class="fa-solid fa-bars"></i></button>
+    </div>
+
+    <div id="chatroomArea">
+      <div id="messageList">
+      </div>
+    </div>
+
+    <div id="messageArea">
+      <button onclick="sendMessage()" class="messageLeftIcon" id="messageSend"><i
+          class="fa-solid fa-rocket"></i></button>
+      <input type="text" id="messageText" placeholder="Message #general">
+    </div>
+
+    <input maxlength="30" spellcheck="false" class="blurple-input" placeholder="Username.."
+      style="display: none; text-align: center; padding-right: 12px;" id="usernameText">
+    <input maxlength="30" spellcheck="false" class="blurple-input" placeholder="Chatroom to join.."
+      style="display: none;" id="chatroomText">
+    <button onclick="changeChatRoom()" style="display: none;" id="chatroomJoin">Join</button>
+    <button onclick="changeUsername()" style="display: none;" id="changeUsernameBtn">Change</button>
+
+  </div>
+
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
