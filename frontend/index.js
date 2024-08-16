@@ -173,7 +173,7 @@ window.onload = function() {
   if (window.WebSocket) {
     console.log("wss available");
     // create the websocket
-    conn = new WebSocket("ws://" + document.location.host + "/ws");
+    conn = new WebSocket("wss://" + document.location.host + "/ws");
     conn.onmessage = (e) => {
       const eventData = JSON.parse(e.data)
       const event = Object.assign(new Event, eventData)
